@@ -13,6 +13,7 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php designfly_posted_on(); ?>
+				<?php designfly_posted_by(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,20 +26,7 @@
 
 	<div class="entry-content clearfix">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-				/* translators: %s: Name of current post. */
-					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'designfly' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			)
-		);
+			the_excerpt();
 		?>
 
 		<?php

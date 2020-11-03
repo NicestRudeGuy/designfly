@@ -33,8 +33,8 @@ class Customizer {
 		/**
 		 * Actions
 		 */
-		add_action( 'customize_register', [ $this, 'customize_register' ] );
-		add_action( 'customize_preview_init', [ $this, 'enqueue_customizer_scripts' ] );
+		add_action( 'customize_register', array( $this, 'customize_register' ) );
+		add_action( 'customize_preview_init', array( $this, 'enqueue_customizer_scripts' ) );
 
 	}
 
@@ -55,21 +55,67 @@ class Customizer {
 
 			$wp_customize->selective_refresh->add_partial(
 				'blogname',
-				[
+				array(
 					'selector'        => '.site-title a',
-					'render_callback' => [ $this, 'customize_partial_blog_name' ],
-				]
+					'render_callback' => array( $this, 'customize_partial_blog_name' ),
+				)
 			);
 			$wp_customize->selective_refresh->add_partial(
 				'blogdescription',
-				[
+				array(
 					'selector'        => '.site-description',
-					'render_callback' => [ $this, 'customize_partial_blog_description' ],
-				]
+					'render_callback' => array( $this, 'customize_partial_blog_description' ),
+				)
 			);
-
 		}
 
+		$wp_customize->add_section(
+			'designfly-service-area',
+			array(
+				'title'      => __( 'Service Navbar', 'designfly' ),
+				'priority'   => 140,
+				'capability' => 'edit_theme_options',
+			)
+		);
+
+		/* ----------------Service-1-------------------- */
+
+		/* Settings for Service -1 Heading */
+		$wp_customize->add_setting(
+			'designfly-service-a-title',
+			array(
+				'capability' => 'edit_theme_options',
+				'default'    => 'Advertising',
+				'transport'  => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-a-title',
+			array(
+				'section' => 'designfly-service-area',
+				'label'   => __( 'Heading', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service -1 Content */
+		$wp_customize->add_setting(
+			'designfly-service-a-body',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-a-body',
+			array(
+				'section' => 'designfly-service-area',
+				'type'    => 'textarea',
+				'label'   => __( 'Content', 'designfly' ),
+			)
+		);
 	}
 
 	/**
@@ -97,7 +143,7 @@ class Customizer {
 	 */
 	public function enqueue_customizer_scripts() {
 
-		Assets::get_instance()->register_script( 'designfly-customizer', 'js/admin/customizer.js', [ 'customize-preview' ] );
+		Assets::get_instance()->register_script( 'designfly-customizer', 'js/admin/customizer.js', array( 'customize-preview' ) );
 
 		wp_enqueue_script( 'designfly-customizer' );
 	}
