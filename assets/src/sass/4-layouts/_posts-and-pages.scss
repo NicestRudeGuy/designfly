@@ -1,0 +1,37 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 24px;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 24px 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 24px;
+}
+
+.site-main {
+	background: $white;
+	padding: 15px;
+}
+
+.designfly-pagination {
+	text-align: center;
+}
