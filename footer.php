@@ -35,7 +35,17 @@
 	endif;
 	?>
 
-	<div class="contact__us"> Find Us here </div>
+	<div class="contact__us"><div class="footer__contact">
+				<p class="contact__title"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-heading' ) ); ?></p>
+				<p class = "contact__info">
+					<span class="contact__address"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-address' ) ); ?></span><br>
+					Tel: <span class="contact__telephone"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-telephone' ) ); ?></span>
+					Fax: <span class="contact__fax"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-fax' ) ); ?></span><br>
+					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
+				</p>
+			</div>
+		</div>
+		<hr /> </div>
 	<div class="site-info text-center">
 		<span><?php designfly_copyright_text(); ?> </span>
 	</div><!-- .site-info -->
