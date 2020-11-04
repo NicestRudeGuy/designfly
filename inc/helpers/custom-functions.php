@@ -27,3 +27,51 @@ function designfly_get_template_part( $slug, $variables = [] ) {
 
 	include $located_template;
 }
+
+/**
+ * Function for registering custom post type Carousel.
+ */
+function designfly_carousel_cpt() {
+
+	$labels = array(
+		'name'               => esc_html__( 'Carousel Posts', 'designfly' ),
+		'singular_name'      => esc_html__( 'Carousel Post', 'designfly' ),
+		'add_new'            => esc_html__( 'Add Carousel Item', 'designfly' ),
+		'all_items'          => esc_html__( 'All Carousel Items', 'designfly' ),
+		'add_new_item'       => esc_html__( 'Add Carousel item', 'designfly' ),
+		'edit_item'          => esc_html__( 'Edit Carousel Item', 'designfly' ),
+		'new_item'           => esc_html__( 'New Carousel Item', 'designfly' ),
+		'view_item'          => esc_html__( 'View Carousel Item', 'designfly' ),
+		'search_item'        => esc_html__( 'Search Carousel', 'designfly' ),
+		'not_found'          => esc_html__( 'No Carousel items found', 'designfly' ),
+		'not_found_in_trash' => esc_html__( 'No Carousel items found in trash', 'designfly' ),
+		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' ),
+	);
+
+	$args = array(
+		'labels'              => $labels,
+		'public'              => true,
+		'has_archive'         => true,
+		'publicly_queryable'  => true,
+		'query_var'           => true,
+		'rewrite'             => true,
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'menu_icon'           => 'dashicons-format-status',
+		'supports'            => array(
+			'title',
+			'editor',
+			'thumbnail',
+			'revision',
+		),
+		'taxonomies'          => array( 'category', 'post_tag' ),
+		'menu_position'       => 4,
+		'exclude_from_search' => true,
+		'rewrite'             => array( 'slug' => 'carousel' ),
+		'show_in_rest'        => false,
+	);
+
+	register_post_type( 'carousel', $args );
+}
+
+add_action( 'init', 'designfly_carousel_cpt' );
