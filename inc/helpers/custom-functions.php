@@ -33,7 +33,7 @@ function designfly_get_template_part( $slug, $variables = [] ) {
  */
 function designfly_carousel_cpt() {
 
-	$labels = array(
+	$labels = [
 		'name'               => esc_html__( 'Carousel Posts', 'designfly' ),
 		'singular_name'      => esc_html__( 'Carousel Post', 'designfly' ),
 		'add_new'            => esc_html__( 'Add Carousel Item', 'designfly' ),
@@ -46,9 +46,9 @@ function designfly_carousel_cpt() {
 		'not_found'          => esc_html__( 'No Carousel items found', 'designfly' ),
 		'not_found_in_trash' => esc_html__( 'No Carousel items found in trash', 'designfly' ),
 		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' ),
-	);
+	];
 
-	$args = array(
+	$args = [
 		'labels'              => $labels,
 		'public'              => true,
 		'has_archive'         => true,
@@ -64,12 +64,11 @@ function designfly_carousel_cpt() {
 			'thumbnail',
 			'revision',
 		),
-		'taxonomies'          => array( 'category', 'post_tag' ),
 		'menu_position'       => 4,
 		'exclude_from_search' => true,
 		'rewrite'             => array( 'slug' => 'carousel' ),
 		'show_in_rest'        => false,
-	);
+	];
 
 	register_post_type( 'carousel', $args );
 }
