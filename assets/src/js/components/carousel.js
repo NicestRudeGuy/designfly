@@ -21,13 +21,13 @@ function showDivs( n ) {
 };
 
 if ( homeURL === document.location.href || defaultLink === document.location.href ) {
-	document.getElementById( 'carousel__button--left' ).addEventListener( 'click', function() {
+	document.getElementById( 'carousel__button--prev' ).addEventListener( 'click', function() {
 		slideIndex += 1;
 		showDivs( slideIndex );
 	}
 	);
 
-	document.getElementById( 'carousel__button--right' ).addEventListener( 'click', function() {
+	document.getElementById( 'carousel__button--next' ).addEventListener( 'click', function() {
 		slideIndex -= 1;
 		showDivs( slideIndex );
 	}
