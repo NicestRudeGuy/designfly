@@ -115,6 +115,39 @@ class Customizer {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'designfly-service-a-icon',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-a-icon',
+				array(
+					'label'         => __( 'Add Service Icon', 'designfly' ),
+					'description'   => esc_html__( 'Service Icon Control', 'designfly' ),
+					'section'       => 'designfly-service-area',
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
 				// Service B area.
 				$wp_customize->add_setting(
 					'designfly-service-b-title',
@@ -217,9 +250,9 @@ class Customizer {
 		$wp_customize->add_setting(
 			'designfly-footer-address',
 			array(
-				'capability'        => 'edit_theme_options',
-				'default'           => 'Street 21 Planet, A-11, dapibus tristique, 123551',
-				'transport'         => 'refresh',
+				'capability' => 'edit_theme_options',
+				'default'    => 'Street 21 Planet, A-11, dapibus tristique, 123551',
+				'transport'  => 'refresh',
 			)
 		);
 
@@ -235,27 +268,27 @@ class Customizer {
 		$wp_customize->add_setting(
 			'designfly-footer-telephone',
 			array(
-				'capability'        => 'edit_theme_options',
-				'default'           => '123 4567890',
-				'transport'         => 'refresh',
+				'capability' => 'edit_theme_options',
+				'default'    => '123 4567890',
+				'transport'  => 'refresh',
 			)
 		);
 
 		$wp_customize->add_control(
 			'designfly-footer-telephone',
 			array(
-				'section'   => 'designfly-footer-area',
-				'priority'  => 2,
-				'label'     => __( 'Telephone Number', 'designfly' ),
+				'section'  => 'designfly-footer-area',
+				'priority' => 2,
+				'label'    => __( 'Telephone Number', 'designfly' ),
 			)
 		);
 
 		$wp_customize->add_setting(
 			'designfly-footer-fax',
 			array(
-				'capability'        => 'edit_theme_options',
-				'default'           => '123 456789',
-				'transport'         => 'refresh',
+				'capability' => 'edit_theme_options',
+				'default'    => '123 456789',
+				'transport'  => 'refresh',
 			)
 		);
 
@@ -271,9 +304,9 @@ class Customizer {
 		$wp_customize->add_setting(
 			'designfly-footer-email',
 			array(
-				'capability'        => 'edit_theme_options',
-				'default'           => 'contactus@dsignfly.com',
-				'transport'         => 'refresh',
+				'capability' => 'edit_theme_options',
+				'default'    => 'contactus@dsignfly.com',
+				'transport'  => 'refresh',
 			)
 		);
 
@@ -283,6 +316,40 @@ class Customizer {
 				'section'  => 'designfly-footer-area',
 				'priority' => 4,
 				'label'    => __( 'E-mail Address', 'designfly' ),
+			)
+		);
+		/* Settings for Twitter Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-twitter-icon',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-twitter-icon',
+				array(
+					'label'         => __( 'Add Twitter Icon', 'designfly' ),
+					'description'   => esc_html__( 'Twitter Icon Control', 'designfly' ),
+					'section'       => 'designfly-footer-area',
+					'priority'      => 14,
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
 			)
 		);
 
