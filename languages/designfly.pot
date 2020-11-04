@@ -56,6 +56,10 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: ../footer.php:34
+msgid "No Posts found"
+msgstr ""
+
 #: ../header.php:24
 msgid "Skip to content"
 msgstr ""
@@ -89,6 +93,14 @@ msgstr ""
 msgid "Full Width Template"
 msgstr ""
 
+#: ../template-parts/content-blog.php:35, ../template-parts/content-page.php:20, ../template-parts/content-single.php:24, ../template-parts/content.php:47
+msgid "Pages:"
+msgstr ""
+
+#: ../template-parts/content-carousel.php:43
+msgid "No carousel items found. Please add some carousel items in admin-dashboard"
+msgstr ""
+
 #: ../template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -106,10 +118,6 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: ../template-parts/content-page.php:20, ../template-parts/content-single.php:24, ../template-parts/content.php:47
-msgid "Pages:"
-msgstr ""
-
 #: ../template-parts/content-page.php:28
 msgid "Edit"
 msgstr ""
@@ -117,6 +125,78 @@ msgstr ""
 #. translators: %s: Name of current post.
 #: ../template-parts/content.php:32
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:76
+msgid "Service Area"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:96, ../inc/classes/class-customizer.php:165, ../inc/classes/class-customizer.php:201, ../inc/classes/class-customizer.php:246
+msgid "Heading"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:114, ../inc/classes/class-customizer.php:183, ../inc/classes/class-customizer.php:219
+msgid "Content"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:131
+msgid "Add Service Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:132
+msgid "Service Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:139, ../inc/classes/class-customizer.php:144, ../inc/classes/class-customizer.php:344, ../inc/classes/class-customizer.php:349
+msgid "Select Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:140, ../inc/classes/class-customizer.php:345
+msgid "Change Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:141, ../inc/classes/class-customizer.php:346
+msgid "Remove"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:142, ../inc/classes/class-customizer.php:347
+msgid "Default"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:143, ../inc/classes/class-customizer.php:348
+msgid "No image selected"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:145, ../inc/classes/class-customizer.php:350
+msgid "Choose Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:227
+msgid "Footer Area"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:264
+msgid "Address"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:282
+msgid "Telephone Number"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:300
+msgid "Fax Number"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:318
+msgid "E-mail Address"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:335
+msgid "Add Twitter Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:336
+msgid "Twitter Icon Control"
 msgstr ""
 
 #: ../inc/classes/class-designfly.php:140
@@ -129,6 +209,54 @@ msgstr ""
 
 #: ../inc/classes/class-widgets.php:61
 msgid "Footer"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:37
+msgid "Carousel Posts"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:38
+msgid "Carousel Post"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:39
+msgid "Add Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:40
+msgid "All Carousel Items"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:41
+msgid "Add Carousel item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:42
+msgid "Edit Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:43
+msgid "New Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:44
+msgid "View Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:45
+msgid "Search Carousel"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:46
+msgid "No Carousel items found"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:47
+msgid "No Carousel items found in trash"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:48
+msgid "Parent Item"
 msgstr ""
 
 #. translators: %s: post date.
@@ -186,7 +314,7 @@ msgid "Y"
 msgstr ""
 
 #: ../inc/helpers/template-tags.php:187
-msgid "designfly"
+msgid "- D'SGNfly | Designed "
 msgstr ""
 
 #: ../inc/helpers/template-tags.php:188
