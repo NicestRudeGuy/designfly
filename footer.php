@@ -42,6 +42,11 @@
 					Tel: <span class="contact__telephone"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-telephone' ) ); ?></span>
 					Fax: <span class="contact__fax"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-fax' ) ); ?></span><br>
 					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
+					<span>
+					<a target="_blank" href="#">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-twitter-icon' ) ) ); ?> "/>
+					</a>
+					</span>
 				</p>
 			</div>
 		</div>

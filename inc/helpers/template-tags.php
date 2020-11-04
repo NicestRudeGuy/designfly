@@ -184,7 +184,7 @@ function designfly_copyright_text() {
 			/* translators: Copyright date format, see https://secure.php.net/date */
 			_x( 'Y', 'copyright date format', 'designfly' )
 		),
-		esc_html__( 'designfly', 'designfly' ),
+		esc_html__( '- D\'SGNfly | Designed ', 'designfly' ),
 		'<a href="' . esc_url( $theme_uri ) . '" rel="designer">' . esc_html__( 'rtCamp', 'designfly' ) . '</a>'
 	);
 
