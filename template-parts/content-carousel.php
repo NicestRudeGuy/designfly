@@ -18,25 +18,9 @@ if ( is_front_page() ) :
 		if ( $designfly_carousel_query->have_posts() ) :
 			?>
 				<div id="carousel__container" class="carousel__content">
+				<input id="carousel__button--prev" class="carousel__button--prev" type="image" alt="Prev" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/carousel-prev.png" />
+				<input id="carousel__button--next" class="carousel__button--next" type="image" alt="Next" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/carousel-next.png" />
 			<?php
-			if ( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) === false ) {
-				?>
-					<input id="carousel__button--prev" class="carousel__button--prev" type="image" alt="Prev" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/slider-arrow-left.png" />
-					<?php
-			} else {
-				?>
-					<input id="carousel__button--prev" class="carousel__button--prev" type="image" alt="Prev" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) ); ?>" />
-					<?php
-			}
-			if ( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) === false ) {
-				?>
-					<input id="carousel__button--next" class="carousel__button--next" type="image" alt="Next" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/slider-arrow-right.png" />
-					<?php
-			} else {
-				?>
-					<input id="carousel__button--next" class="carousel__button--next" type="image" alt="Next" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) ); ?>" />
-					<?php
-			}
 			while ( $designfly_carousel_query->have_posts() ) :
 				$designfly_carousel_query->the_post();
 				?>
