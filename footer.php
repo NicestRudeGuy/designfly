@@ -44,6 +44,18 @@
 					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
 					<span>
 					<a target="_blank" href="#">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-facebook-icon' ) ) ); ?> "/>
+					</a>
+					<a target="_blank" href="#">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-google-icon' ) ) ); ?> "/>
+					</a>
+					<a target="_blank" href="#">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-linkedin-icon' ) ) ); ?> "/>
+					</a>
+					<a target="_blank" href="#">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-pintrest-icon' ) ) ); ?> "/>
+					</a>
+					<a target="_blank" href="#">
 					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-twitter-icon' ) ) ); ?> "/>
 					</a>
 					</span>

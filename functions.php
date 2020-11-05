@@ -1,6 +1,6 @@
 <?php
 /**
- * designfly file includes and definitions
+ * Designfly file includes and definitions
  *
  * @package Designfly
  */

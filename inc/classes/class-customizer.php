@@ -14,6 +14,7 @@ use Designfly\Inc\Traits\Singleton;
  */
 class Customizer {
 
+
 	use Singleton;
 
 	/**
@@ -148,41 +149,74 @@ class Customizer {
 			)
 		);
 
-				// Service B area.
-				$wp_customize->add_setting(
-					'designfly-service-b-title',
-					array(
-						'capability' => 'edit_theme_options',
-						'default'    => 'Multimedia',
-						'transport'  => 'refresh',
-					)
-				);
+		// Service B area.
+		$wp_customize->add_setting(
+			'designfly-service-b-title',
+			array(
+				'capability' => 'edit_theme_options',
+				'default'    => 'Multimedia',
+				'transport'  => 'refresh',
+			)
+		);
 
-				$wp_customize->add_control(
-					'designfly-service-b-title',
-					array(
-						'section' => 'designfly-service-area',
-						'label'   => __( 'Heading', 'designfly' ),
-					)
-				);
+		$wp_customize->add_control(
+			'designfly-service-b-title',
+			array(
+				'section' => 'designfly-service-area',
+				'label'   => __( 'Heading', 'designfly' ),
+			)
+		);
 
-				$wp_customize->add_setting(
-					'designfly-service-b-body',
-					array(
-						'capability' => 'edit_theme_options',
-						'default'    => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
-						'transport'  => 'refresh',
-					)
-				);
+		$wp_customize->add_setting(
+			'designfly-service-b-body',
+			array(
+				'capability' => 'edit_theme_options',
+				'default'    => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
+				'transport'  => 'refresh',
+			)
+		);
 
-				$wp_customize->add_control(
-					'designfly-service-b-body',
-					array(
-						'section' => 'designfly-service-area',
-						'type'    => 'textarea',
-						'label'   => __( 'Content', 'designfly' ),
-					)
-				);
+		$wp_customize->add_control(
+			'designfly-service-b-body',
+			array(
+				'section' => 'designfly-service-area',
+				'type'    => 'textarea',
+				'label'   => __( 'Content', 'designfly' ),
+			)
+		);
+
+		$wp_customize->add_setting(
+			'designfly-service-b-icon',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-b-icon',
+				array(
+					'label'         => __( 'Add MultiMedia Icon', 'designfly' ),
+					'description'   => esc_html__( 'MultiMedia Icon Control', 'designfly' ),
+					'section'       => 'designfly-service-area',
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
 
 		// Service C area.
 		$wp_customize->add_setting(
@@ -220,7 +254,40 @@ class Customizer {
 			)
 		);
 
-		// Footer area.
+		$wp_customize->add_setting(
+			'designfly-service-c-icon',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-c-icon',
+				array(
+					'label'         => __( 'Add Photography Icon', 'designfly' ),
+					'description'   => esc_html__( 'Photography Icon Control', 'designfly' ),
+					'section'       => 'designfly-service-area',
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Footer Area */
 		$wp_customize->add_section(
 			'designfly-footer-area',
 			array(
@@ -230,6 +297,7 @@ class Customizer {
 			)
 		);
 
+		/* Setting for heading */
 		$wp_customize->add_setting(
 			'designfly-footer-heading',
 			array(
@@ -247,6 +315,7 @@ class Customizer {
 			)
 		);
 
+		/* Setting for address */
 		$wp_customize->add_setting(
 			'designfly-footer-address',
 			array(
@@ -265,6 +334,7 @@ class Customizer {
 			)
 		);
 
+		/* Setting for phone */
 		$wp_customize->add_setting(
 			'designfly-footer-telephone',
 			array(
@@ -283,24 +353,7 @@ class Customizer {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'designfly-footer-fax',
-			array(
-				'capability' => 'edit_theme_options',
-				'default'    => '123 456789',
-				'transport'  => 'refresh',
-			)
-		);
-
-		$wp_customize->add_control(
-			'designfly-footer-fax',
-			array(
-				'section'  => 'designfly-footer-area',
-				'priority' => 3,
-				'label'    => __( 'Fax Number', 'designfly' ),
-			)
-		);
-
+		/* Setting for email */
 		$wp_customize->add_setting(
 			'designfly-footer-email',
 			array(
@@ -314,15 +367,34 @@ class Customizer {
 			'designfly-footer-email',
 			array(
 				'section'  => 'designfly-footer-area',
-				'priority' => 4,
+				'priority' => 3,
 				'label'    => __( 'E-mail Address', 'designfly' ),
 			)
 		);
-		/* Settings for Twitter Icon */
+
+		/* Setting for Fax */
 		$wp_customize->add_setting(
-			'designfly-footer-twitter-icon',
+			'designfly-footer-fax',
 			array(
-				'default'   => '',
+				'capability' => 'edit_theme_options',
+				'default'    => '123 456789',
+				'transport'  => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-footer-fax',
+			array(
+				'section'  => 'designfly-footer-area',
+				'priority' => 4,
+				'label'    => __( 'Fax Number', 'designfly' ),
+			)
+		);
+
+		/* Settings for facebook Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-facebook-icon',
+			array(
 				'transport' => 'refresh',
 			)
 		);
@@ -330,12 +402,148 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-twitter-icon',
+				'designfly-footer-facebook-icon',
+				array(
+					'label'         => __( 'Add Facebok Icon', 'designfly' ),
+					'description'   => esc_html__( 'Facebook Icon Control', 'designfly' ),
+					'section'       => 'designfly-footer-area',
+					'priority'      => 5,
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Settings for google Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-google-icon',
+			array(
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-google-icon',
+				array(
+					'label'         => __( 'Add Google Icon', 'designfly' ),
+					'description'   => esc_html__( 'Google Icon Control', 'designfly' ),
+					'section'       => 'designfly-footer-area',
+					'priority'      => 6,
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Settings for linkedin Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-linkedin-icon',
+			array(
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-linkedin-icon',
+				array(
+					'label'         => __( 'Add Linked Icon', 'designfly' ),
+					'description'   => esc_html__( 'Linked Icon Control', 'designfly' ),
+					'section'       => 'designfly-footer-area',
+					'priority'      => 7,
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Settings for pintrest Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-pintrest-icon',
+			array(
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-pintrest-icon',
+				array(
+					'label'         => __( 'Add Pintrest Icon', 'designfly' ),
+					'description'   => esc_html__( 'Pintrest Icon Control', 'designfly' ),
+					'section'       => 'designfly-footer-area',
+					'priority'      => 8,
+					'flex_width'    => true, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Settings for twitter Icon */
+		$wp_customize->add_setting(
+			'designfly-footer-twitter-icon',
+			array(
+				'transport' => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-facebook-icon',
 				array(
 					'label'         => __( 'Add Twitter Icon', 'designfly' ),
 					'description'   => esc_html__( 'Twitter Icon Control', 'designfly' ),
 					'section'       => 'designfly-footer-area',
-					'priority'      => 14,
+					'priority'      => 9,
 					'flex_width'    => true, // Optional. Default: false.
 					'flex_height'   => true, // Optional. Default: false.
 					'width'         => 50, // Optional. Default: 150.

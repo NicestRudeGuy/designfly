@@ -1,22 +1,20 @@
 <?php
 /**
- * Front page template
+ * Template Name: Portfolio Page
+ *
+ * Portfolio page template file.
  *
  * @package Designfly
  */
 
 get_header();
-
-get_template_part( 'template-parts/content', 'carousel' );
-get_template_part( 'template-parts/content', 'servicebar' );
 ?>
-
-<?php
+		<?php
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$designfly_query = new WP_Query(
 			array(
 				'post_type'      => 'portfolio-post',
-				'posts_per_page' => 6,
+				'posts_per_page' => 15,
 				'paged'          => $designfly_paged,
 			)
 		);
@@ -58,6 +56,7 @@ get_template_part( 'template-parts/content', 'servicebar' );
 				?>
 			</div> <!-- #portfolio-content -->
 
+
 			<?php
 		else :
 			?>
@@ -67,5 +66,5 @@ get_template_part( 'template-parts/content', 'servicebar' );
 			<?php
 		endif;
 		?>
-
-<?php get_footer(); ?>
+<?php
+get_footer();
