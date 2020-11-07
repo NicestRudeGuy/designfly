@@ -23,7 +23,9 @@ get_template_part( 'template-parts/content', 'servicebar' );
 			?>
 			<div class="portfolio-title">
 					<p> D'SIGN IS THE SOUL 
-					<input class="portfolio-button" type="button" value="view all">
+					<a class="portfolio-button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfolio' ) ) ); ?>">
+					view all
+					</a>
 					</p>
 					<hr />
 			</div>
