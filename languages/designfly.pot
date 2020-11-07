@@ -57,7 +57,11 @@ msgid "Comments are closed."
 msgstr ""
 
 #: ../footer.php:34
-msgid "No Posts found"
+msgid "No Posts found!"
+msgstr ""
+
+#: ../front-page.php:41, ../page-templates/portfolio-template.php:42
+msgid "No items found."
 msgstr ""
 
 #: ../header.php:24
@@ -93,12 +97,16 @@ msgstr ""
 msgid "Full Width Template"
 msgstr ""
 
-#: ../template-parts/content-blog.php:35, ../template-parts/content-page.php:20, ../template-parts/content-single.php:24, ../template-parts/content.php:47
+#: ../page-templates/portfolio-template.php:3
+msgid "Portfolio Page"
+msgstr ""
+
+#: ../template-parts/content-blog.php:35, ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:24, ../template-parts/content.php:47
 msgid "Pages:"
 msgstr ""
 
 #: ../template-parts/content-carousel.php:43
-msgid "No carousel items found. Please add some carousel items in admin-dashboard"
+msgid "No carousel items found. Add them from admin dashboard"
 msgstr ""
 
 #: ../template-parts/content-none.php:14
@@ -127,80 +135,176 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:76
+#: ../inc/classes/class-customizer.php:77
 msgid "Service Area"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:96, ../inc/classes/class-customizer.php:165, ../inc/classes/class-customizer.php:201, ../inc/classes/class-customizer.php:246
+#: ../inc/classes/class-customizer.php:97, ../inc/classes/class-customizer.php:166, ../inc/classes/class-customizer.php:235, ../inc/classes/class-customizer.php:314
 msgid "Heading"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:114, ../inc/classes/class-customizer.php:183, ../inc/classes/class-customizer.php:219
+#: ../inc/classes/class-customizer.php:115, ../inc/classes/class-customizer.php:184, ../inc/classes/class-customizer.php:253
 msgid "Content"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:131
+#: ../inc/classes/class-customizer.php:132
 msgid "Add Service Icon"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:132
+#: ../inc/classes/class-customizer.php:133
 msgid "Service Icon Control"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:139, ../inc/classes/class-customizer.php:144, ../inc/classes/class-customizer.php:344, ../inc/classes/class-customizer.php:349
+#: ../inc/classes/class-customizer.php:140, ../inc/classes/class-customizer.php:145, ../inc/classes/class-customizer.php:209, ../inc/classes/class-customizer.php:214, ../inc/classes/class-customizer.php:278, ../inc/classes/class-customizer.php:283, ../inc/classes/class-customizer.php:416, ../inc/classes/class-customizer.php:421, ../inc/classes/class-customizer.php:450, ../inc/classes/class-customizer.php:455, ../inc/classes/class-customizer.php:484, ../inc/classes/class-customizer.php:489, ../inc/classes/class-customizer.php:518, ../inc/classes/class-customizer.php:523, ../inc/classes/class-customizer.php:552, ../inc/classes/class-customizer.php:557
 msgid "Select Image"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:140, ../inc/classes/class-customizer.php:345
+#: ../inc/classes/class-customizer.php:141, ../inc/classes/class-customizer.php:210, ../inc/classes/class-customizer.php:279, ../inc/classes/class-customizer.php:417, ../inc/classes/class-customizer.php:451, ../inc/classes/class-customizer.php:485, ../inc/classes/class-customizer.php:519, ../inc/classes/class-customizer.php:553
 msgid "Change Image"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:141, ../inc/classes/class-customizer.php:346
+#: ../inc/classes/class-customizer.php:142, ../inc/classes/class-customizer.php:211, ../inc/classes/class-customizer.php:280, ../inc/classes/class-customizer.php:418, ../inc/classes/class-customizer.php:452, ../inc/classes/class-customizer.php:486, ../inc/classes/class-customizer.php:520, ../inc/classes/class-customizer.php:554
 msgid "Remove"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:142, ../inc/classes/class-customizer.php:347
+#: ../inc/classes/class-customizer.php:143, ../inc/classes/class-customizer.php:212, ../inc/classes/class-customizer.php:281, ../inc/classes/class-customizer.php:419, ../inc/classes/class-customizer.php:453, ../inc/classes/class-customizer.php:487, ../inc/classes/class-customizer.php:521, ../inc/classes/class-customizer.php:555
 msgid "Default"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:143, ../inc/classes/class-customizer.php:348
+#: ../inc/classes/class-customizer.php:144, ../inc/classes/class-customizer.php:213, ../inc/classes/class-customizer.php:282, ../inc/classes/class-customizer.php:420, ../inc/classes/class-customizer.php:454, ../inc/classes/class-customizer.php:488, ../inc/classes/class-customizer.php:522, ../inc/classes/class-customizer.php:556
 msgid "No image selected"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:145, ../inc/classes/class-customizer.php:350
+#: ../inc/classes/class-customizer.php:146, ../inc/classes/class-customizer.php:215, ../inc/classes/class-customizer.php:284, ../inc/classes/class-customizer.php:422, ../inc/classes/class-customizer.php:456, ../inc/classes/class-customizer.php:490, ../inc/classes/class-customizer.php:524, ../inc/classes/class-customizer.php:558
 msgid "Choose Image"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:227
+#: ../inc/classes/class-customizer.php:201
+msgid "Add MultiMedia Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:202
+msgid "MultiMedia Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:270
+msgid "Add Photography Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:271
+msgid "Photography Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:294
 msgid "Footer Area"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:264
+#: ../inc/classes/class-customizer.php:333
 msgid "Address"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:282
+#: ../inc/classes/class-customizer.php:352
 msgid "Telephone Number"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:300
-msgid "Fax Number"
-msgstr ""
-
-#: ../inc/classes/class-customizer.php:318
+#: ../inc/classes/class-customizer.php:371
 msgid "E-mail Address"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:335
+#: ../inc/classes/class-customizer.php:390
+msgid "Fax Number"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:407
+msgid "Add Facebok Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:408
+msgid "Facebook Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:441
+msgid "Add Google Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:442
+msgid "Google Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:475
+msgid "Add Linked Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:476
+msgid "Linked Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:509
+msgid "Add Pintrest Icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:510
+msgid "Pintrest Icon Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:543
 msgid "Add Twitter Icon"
 msgstr ""
 
-#: ../inc/classes/class-customizer.php:336
+#: ../inc/classes/class-customizer.php:544
 msgid "Twitter Icon Control"
 msgstr ""
 
 #: ../inc/classes/class-designfly.php:140
 msgid "Read More"
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:27
+msgid "Your site&#8217;s most Popular Posts."
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:32
+msgid "Widget Popular Posts"
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:52
+msgid "Popular Posts"
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:131, ../inc/classes/class-widget-portfolio-posts.php:117, ../inc/classes/class-widget-recent-posts.php:128
+msgid "Title:"
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:136, ../inc/classes/class-widget-portfolio-posts.php:122, ../inc/classes/class-widget-recent-posts.php:133
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../inc/classes/class-widget-popular-posts.php:142, ../inc/classes/class-widget-recent-posts.php:139
+msgid "Display post date?"
+msgstr ""
+
+#: ../inc/classes/class-widget-portfolio-posts.php:27
+msgid "Your site&#8217;s Portfolio Posts."
+msgstr ""
+
+#: ../inc/classes/class-widget-portfolio-posts.php:32
+msgid "Widget Portfolio"
+msgstr ""
+
+#: ../inc/classes/class-widget-portfolio-posts.php:50
+msgid "Portfolio"
+msgstr ""
+
+#: ../inc/classes/class-widget-recent-posts.php:26
+msgid "Your site&#8217;s most recent Posts customized."
+msgstr ""
+
+#: ../inc/classes/class-widget-recent-posts.php:31
+msgid "Widget Recent Posts"
+msgstr ""
+
+#: ../inc/classes/class-widget-recent-posts.php:49
+msgid "Recent Posts"
 msgstr ""
 
 #: ../inc/classes/class-widgets.php:49
@@ -255,8 +359,48 @@ msgstr ""
 msgid "No Carousel items found in trash"
 msgstr ""
 
-#: ../inc/helpers/custom-functions.php:48
-msgid "Parent Item"
+#: ../inc/helpers/custom-functions.php:83
+msgid "Portfolio Posts"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:84
+msgid "Portfolio Post"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:85
+msgid "Add Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:86
+msgid "All Portfolio Items"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:87
+msgid "Add Portfolio item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:88
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:89
+msgid "New Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:90
+msgid "View Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:91
+msgid "Search Portfolio"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:92
+msgid "No Portfolio items found"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:93
+msgid "No Portfolio items found in trash"
 msgstr ""
 
 #. translators: %s: post date.
