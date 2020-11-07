@@ -1,6 +1,30 @@
 .site-header {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 20px 480px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 5px;
+
+	.search-submit{
+		margin-top:10px;
+		background-image: url("../img/search-icon.png");
+		font-size:0;
+		clip-path: circle(50% at 28% 20%);
+		border: none;
+
+		&:hover{
+			background-image: url("../img/search-icon.png");
+		}
+	}
+
+	.search-field{
+		margin-top:10px;
+		border: 1px solid $general-color;
+		height: 20px;
+		width: 150px;
+	}
+	::placeholder{
+		opacity: 0;
+	}
 }
 
 .site-title {
@@ -9,4 +33,99 @@
 
 .site-description {
 	margin-bottom: 0;
+}
+
+.site-branding {
+	float: left;
+}
+
+/* Carousel */
+.header-image {
+	background-image: url("../img/slider-image.png");
+	background-size: cover;
+	height: 55vh;
+	width: 100%;
+}
+
+.carousel__box {
+	text-align: center;
+	padding-top:250px;
+	max-width: 55%;
+	margin: auto;
+}
+
+.carousel__slides {
+	display: none;
+}
+
+.carousel__slides__title {
+	color: $white;
+	text-shadow: 2px 0 $red-dark;
+	font-size: 70px;
+	font-weight: 600;
+	
+}
+
+.carousel__slides__body {
+	font-size: 16px;
+	color: $white;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.carousel__button--prev {
+	left: -50%;
+	position: relative;
+	
+}
+
+.carousel__button--next {
+	left: 50%;
+	position: relative;
+}
+
+/* Servicebar */
+.servicebar{
+	margin-top:3px;
+	min-height: 100px;
+	background-image: url('../img/features-repeatable-bg.png');
+	background-repeat: repeat;
+}
+
+.servicebar-box{
+	margin: 0 480px;
+	display: grid;
+	grid-template-areas:
+		" service service service ";
+	justify-content: space-evenly;
+}
+
+.service{
+	align-items: center;
+	margin-top:10px;
+	display: flex;
+	max-width: 300px;
+
+	.service__logo{
+		min-width: 50px;
+		margin-right: 10px;
+	}
+
+	.service__body{
+		h3{
+			color: $red-light;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		p{
+			line-height: 19.5px;
+			font-size: 13px;
+			margin: 5px ;
+		}
+
+		&:hover{
+			color: $red-light;
+		}
+	}
 }

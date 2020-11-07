@@ -1,13 +1,11 @@
 /*==============================
-          Main Menu
+        Main Menu
 ===============================*/
 
 .designfly-main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
+	margin-top: 18px;
+	display: flex;
+	float: right;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -52,23 +50,22 @@
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-			color: $color__link-hover;
-		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		font-size: 14px;
 		padding: 10px;
+		font-weight: 700;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-		color: $color__link-hover;
+		color: $white;
+		background-color: $red-light;
+		border-radius: 3px;
 	}
 }
 
@@ -89,5 +86,9 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+
+	.search-button{
+		color:red;
 	}
 }
