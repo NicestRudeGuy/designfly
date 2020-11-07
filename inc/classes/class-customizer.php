@@ -393,7 +393,7 @@ class Customizer {
 
 		/* Settings for facebook Icon */
 		$wp_customize->add_setting(
-			'designfly-footer-facebook-icon',
+			'designfly-footer-facebook-logo',
 			array(
 				'transport' => 'refresh',
 			)
@@ -402,10 +402,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-facebook-icon',
+				'designfly-footer-facebook-logo',
 				array(
-					'label'         => __( 'Add Facebok Icon', 'designfly' ),
-					'description'   => esc_html__( 'Facebook Icon Control', 'designfly' ),
+					'label'         => __( 'Add Facebok Logo', 'designfly' ),
+					'description'   => esc_html__( 'Facebook Logo Control', 'designfly' ),
 					'section'       => 'designfly-footer-area',
 					'priority'      => 5,
 					'flex_width'    => true, // Optional. Default: false.
@@ -427,7 +427,7 @@ class Customizer {
 
 		/* Settings for google Icon */
 		$wp_customize->add_setting(
-			'designfly-footer-google-icon',
+			'designfly-footer-google-logo',
 			array(
 				'transport' => 'refresh',
 			)
@@ -436,10 +436,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-google-icon',
+				'designfly-footer-google-logo',
 				array(
-					'label'         => __( 'Add Google Icon', 'designfly' ),
-					'description'   => esc_html__( 'Google Icon Control', 'designfly' ),
+					'label'         => __( 'Add Google Logo', 'designfly' ),
+					'description'   => esc_html__( 'Google Logo Control', 'designfly' ),
 					'section'       => 'designfly-footer-area',
 					'priority'      => 6,
 					'flex_width'    => true, // Optional. Default: false.
@@ -461,7 +461,7 @@ class Customizer {
 
 		/* Settings for linkedin Icon */
 		$wp_customize->add_setting(
-			'designfly-footer-linkedin-icon',
+			'designfly-footer-linkedin-logo',
 			array(
 				'transport' => 'refresh',
 			)
@@ -470,10 +470,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-linkedin-icon',
+				'designfly-footer-linkedin-logo',
 				array(
-					'label'         => __( 'Add Linked Icon', 'designfly' ),
-					'description'   => esc_html__( 'Linked Icon Control', 'designfly' ),
+					'label'         => __( 'Add Linked Logo', 'designfly' ),
+					'description'   => esc_html__( 'Linked Logo Control', 'designfly' ),
 					'section'       => 'designfly-footer-area',
 					'priority'      => 7,
 					'flex_width'    => true, // Optional. Default: false.
@@ -495,7 +495,7 @@ class Customizer {
 
 		/* Settings for pintrest Icon */
 		$wp_customize->add_setting(
-			'designfly-footer-pintrest-icon',
+			'designfly-footer-pintrest-logo',
 			array(
 				'transport' => 'refresh',
 			)
@@ -504,7 +504,7 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-pintrest-icon',
+				'designfly-footer-pintrest-logo',
 				array(
 					'label'         => __( 'Add Pintrest Icon', 'designfly' ),
 					'description'   => esc_html__( 'Pintrest Icon Control', 'designfly' ),
@@ -529,7 +529,7 @@ class Customizer {
 
 		/* Settings for twitter Icon */
 		$wp_customize->add_setting(
-			'designfly-footer-twitter-icon',
+			'designfly-footer-twitter-logo',
 			array(
 				'transport' => 'refresh',
 			)
@@ -538,10 +538,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-footer-facebook-icon',
+				'designfly-footer-twitter-logo',
 				array(
-					'label'         => __( 'Add Twitter Icon', 'designfly' ),
-					'description'   => esc_html__( 'Twitter Icon Control', 'designfly' ),
+					'label'         => __( 'Add Twitter Logo', 'designfly' ),
+					'description'   => esc_html__( 'Twitter Logo Control', 'designfly' ),
 					'section'       => 'designfly-footer-area',
 					'priority'      => 9,
 					'flex_width'    => true, // Optional. Default: false.
