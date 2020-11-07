@@ -9,6 +9,7 @@
 ?>
 
 </div><!-- #content -->
+<hr>
 <footer id="colophon" class="site-footer" role="contentinfo">
 <?php
 
@@ -31,38 +32,39 @@
 		<?php
 		wp_reset_postdata();
 	else :
-		__( 'No Posts found', 'designfly' );
+		__( 'No Posts found!', 'designfly' );
 	endif;
 	?>
 
-	<div class="contact__us"><div class="footer__contact">
-				<p class="contact__title"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-heading' ) ); ?></p>
+		<div class="footer__contact">
+				<p class="contact__head"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-heading' ) ); ?></p>
 				<p class = "contact__info">
 					<span class="contact__address"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-address' ) ); ?></span><br>
-					Tel: <span class="contact__telephone"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-telephone' ) ); ?></span>
+					Tel: <span class="contact__mobile"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-telephone' ) ); ?></span>
 					Fax: <span class="contact__fax"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-fax' ) ); ?></span><br>
 					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
 					<span>
+					</br>
 					<a target="_blank" href="#">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-facebook-icon' ) ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-facebook-logo' ) ) ); ?> "/>
 					</a>
 					<a target="_blank" href="#">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-google-icon' ) ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-google-logo' ) ) ); ?> "/>
 					</a>
 					<a target="_blank" href="#">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-linkedin-icon' ) ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-linkedin-logo' ) ) ); ?> "/>
 					</a>
 					<a target="_blank" href="#">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-pintrest-icon' ) ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-pintrest-logo' ) ) ); ?> "/>
 					</a>
 					<a target="_blank" href="#">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-twitter-icon' ) ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-twitter-logo' ) ) ); ?> "/>
 					</a>
 					</span>
 				</p>
 			</div>
 		</div>
-		<hr /> </div>
+		<hr />
 	<div class="site-info text-center">
 		<span><?php designfly_copyright_text(); ?> </span>
 	</div><!-- .site-info -->

@@ -25,6 +25,7 @@ html {
  *    base font size.
  */
 body {
+	color: $general-color;
 	background: $color__background-body;
 	margin: 0;
 	@include font-family();
@@ -315,8 +316,7 @@ samp {
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
+	width: 50%;
 	box-sizing: content-box;
 	height: 1px; // Address differences between Firefox and other browsers.
 }
