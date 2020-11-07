@@ -152,7 +152,7 @@ function designfly_site_description() {
 }
 
 /**
- * designfly Pagination.
+ * Designfly Pagination.
  *
  * @return void
  */
