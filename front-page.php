@@ -22,7 +22,9 @@ get_template_part( 'template-parts/content', 'servicebar' );
 		if ( $designfly_query->have_posts() ) :
 			?>
 			<div class="portfolio-title">
-					<p> D'SIGN IS THE SOUL </p>
+					<p> D'SIGN IS THE SOUL 
+					<input class="portfolio-button" type="button" value="view all">
+					</p>
 					<hr />
 			</div>
 			<div class="portfolio-content">
