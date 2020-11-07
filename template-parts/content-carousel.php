@@ -7,7 +7,7 @@
 
 if ( is_front_page() ) :
 	?>
-		<div class="header-img" >
+		<div class="header-image" >
 		<!-- Carousel Posts -->
 		<?php
 		$designfly_carousel_query = new WP_Query(
@@ -17,7 +17,7 @@ if ( is_front_page() ) :
 		);
 		if ( $designfly_carousel_query->have_posts() ) :
 			?>
-				<div id="carousel__container" class="carousel__content">
+				<div id="carousel__container" class="carousel__box">
 				<input id="carousel__button--prev" class="carousel__button--prev" type="image" alt="Prev" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/carousel-prev.png" />
 				<input id="carousel__button--next" class="carousel__button--next" type="image" alt="Next" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/carousel-next.png" />
 			<?php
@@ -28,7 +28,7 @@ if ( is_front_page() ) :
 							<div class="carousel__slides__title">
 							<?php the_title(); ?>
 							</div>
-							<div class="carousel__slides__content">
+							<div class="carousel__slides__body">
 							<?php the_content(); ?>
 							</div>
 						</div>
@@ -40,7 +40,7 @@ if ( is_front_page() ) :
 			else :
 				?>
 				<p>
-					<?php esc_html_e( 'No carousel items found. Please add some carousel items in admin-dashboard', 'designfly' ); ?>
+					<?php esc_html_e( 'No carousel items found. Add them from admin dashboard', 'designfly' ); ?>
 				</p>
 				<?php
 			endif;
