@@ -1280,6 +1280,15 @@ object {
   font-weight: 100;
   font-size: 2.8125rem;
   text-shadow: 0.125rem #ffffff; }
+  .portfolio-title p .portfolio-button {
+    margin-left: 50%;
+    font-size: 1rem;
+    padding: 0.125rem 0.4375rem;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 0.1875rem; }
+    .portfolio-title p .portfolio-button:hover {
+      color: #ef4632; }
 
 .post-thumbnail img {
   width: 18.75rem;
