@@ -15,7 +15,8 @@ get_header();
 get_template_part( 'template-parts/content', 'servicebar' );
 ?>
 
-<div id="primary">
+<div class="designfly-blog-main">
+<div id="primary" class="primary">
 	<main id="main" class="site-main" role="main">
 
 		<?php
@@ -26,7 +27,8 @@ get_template_part( 'template-parts/content', 'servicebar' );
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-
+				<h1 class="lets-blog">LET'S BLOG</h1>
+				<hr class="lets-blog-hr">
 				<?php
 			endif;
 
@@ -59,4 +61,7 @@ get_template_part( 'template-parts/content', 'servicebar' );
 
 <?php
 get_sidebar();
+?>
+</div>
+<?php
 get_footer();

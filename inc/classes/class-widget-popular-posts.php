@@ -62,12 +62,14 @@ class Widget_Popular_Posts extends WP_Widget {
 		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 		if ( $title ) {
 			echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] );
+			?> <hr class="after-title"> 
+			<?php
 		}
 
 		$popular_posts = new \WP_Query(
 			array(
 				'posts_per_page' => $number,
-				'meta_key'       => 'post_views_count',
+				'meta_key'       => 'post_views_count', //phpcs:ignore
 				'orderby'        => 'meta_value_num',
 				'order'          => 'DESC',
 			)
@@ -76,7 +78,8 @@ class Widget_Popular_Posts extends WP_Widget {
 		echo wp_kses_post( $args['before_widget'] );
 		// This is where you run the code and display the output.
 		while ( $popular_posts->have_posts() ) :
-			$popular_posts->the_post(); ?>
+			$popular_posts->the_post();
+			?>
 		<div class = "widget-post--custom">
 			<?php echo esc_html( the_post_thumbnail( array( 45, 45 ), array( 'class' => 'widget-post__img' ) ) ); ?>
 			<div class = "widget-post__meta">

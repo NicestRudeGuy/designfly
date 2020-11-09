@@ -12,12 +12,12 @@ get_template_part( 'template-parts/content', 'servicebar' );
 ?>
 
 <?php
-		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-		$designfly_query = new WP_Query(
+		$designfly_portfolio_pagination = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$designfly_query                = new WP_Query(
 			array(
 				'post_type'      => 'portfolio-post',
 				'posts_per_page' => 15,
-				'paged'          => $designfly_paged,
+				'paged'          => $designfly_portfolio_pagination,
 			)
 		);
 		if ( $designfly_query->have_posts() ) :
@@ -32,6 +32,7 @@ get_template_part( 'template-parts/content', 'servicebar' );
 					$designfly_query->the_post();
 					get_template_part( 'template-parts/content', 'portfolio' );
 				endwhile;
+				designfly_portfolio_pagination( $designfly_query );
 				?>
 			</div> <!-- #portfolio-content -->
 			<?php

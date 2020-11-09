@@ -24,7 +24,7 @@ class Widget_Portfolio_Posts extends WP_Widget {
 	public function __construct() {
 		$designfly_widget_ops = array(
 			'classname'                   => 'portfolio_widget',
-			'description'                 => __( 'Your site&#8217;s Portfolio Posts.', 'designfly' ),
+			'description'                 => __( 'Your site&#8217; Portfolio Posts.', 'designfly' ),
 			'customize_selective_refresh' => true,
 		);
 		parent::__construct(
@@ -59,6 +59,8 @@ class Widget_Portfolio_Posts extends WP_Widget {
 		}
 		if ( $title ) {
 			echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] );
+			?> <hr class="after-title"> 
+			<?php
 		}
 
 		$recent_posts = wp_get_recent_posts(

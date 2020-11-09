@@ -82,11 +82,11 @@ function designfly_entry_footer() {
 				wp_kses(
 					/* translators: %s: post title */
 					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'designfly' ),
-					[
-						'span' => [
-							'class' => [],
-						],
-					]
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
 				),
 				get_the_title()
 			)
@@ -99,11 +99,11 @@ function designfly_entry_footer() {
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
 				__( 'Edit <span class="screen-reader-text">%s</span>', 'designfly' ),
-				[
-					'span' => [
-						'class' => [],
-					],
-				]
+				array(
+					'span' => array(
+						'class' => array(),
+					),
+				)
 			),
 			get_the_title()
 		),
@@ -158,15 +158,15 @@ function designfly_site_description() {
  */
 function designfly_pagination() {
 
-	$allowed_tags = [
-		'span' => [
-			'class' => [],
-		],
-		'a'    => [
-			'class' => [],
-			'href'  => [],
-		],
-	];
+	$allowed_tags = array(
+		'span' => array(
+			'class' => array(),
+		),
+		'a'    => array(
+			'class' => array(),
+			'href'  => array(),
+		),
+	);
 
 	printf( '<nav class="designfly-pagination clearfix">%s</nav>', wp_kses( paginate_links(), $allowed_tags ) );
 }
@@ -189,4 +189,41 @@ function designfly_copyright_text() {
 	);
 
 	echo $default; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+
+/**
+ * Function Custom pagination.
+ *
+ * @param mixed $query that gets the no of posts.
+ * @return void
+ */
+function designfly_portfolio_pagination( $query ) {
+
+	$allowed_tags = array(
+		'span' => array(
+			'class' => array(),
+		),
+		'i'    => array(
+			'class' => array(),
+		),
+		'a'    => array(
+			'class' => array(),
+			'href'  => array(),
+		),
+	);
+
+	printf(
+		'<nav class="designfly-custom-pagination clearfix">%s</nav>',
+		wp_kses(
+			paginate_links(
+				array(
+					'prev_text' => '<i class="pagination-arrow-left" aria-hidden="true"></i> ' . __( 'Previous', 'designfly' ),
+					'next_text' => __( 'Next', 'designfly' ) . ' <i class="pagination-arrow-right" aria-hidden="true"></i>',
+					'total'     => $query->max_num_pages,
+				)
+			),
+			$allowed_tags
+		)
+	);
 }

@@ -59,6 +59,8 @@ class Widget_Recent_Posts extends WP_Widget {
 		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 		if ( $title ) {
 			echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] );
+			?> <hr class="after-title"> 
+			<?php
 		}
 
 		$recent_posts = wp_get_recent_posts(

@@ -6,9 +6,10 @@
  */
 
 get_header();
+get_template_part( 'template-parts/content', 'servicebar' );
 ?>
-
-<div id="primary">
+<div class="designfly-single-blog">
+<div id="primary" class="primary">
 	<main id="main" class="site-main" role="main">
 
 		<?php
@@ -32,4 +33,7 @@ get_header();
 
 <?php
 get_sidebar();
+?>
+</div>
+<?php
 get_footer();
