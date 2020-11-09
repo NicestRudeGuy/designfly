@@ -7,6 +7,7 @@
 import '../sass/main.scss';
 import * as components from './components';
 import './components/carousel';
+import './components/portfolio';
 
 window.$ = window.$ || jQuery;
 

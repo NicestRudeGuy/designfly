@@ -1165,6 +1165,7 @@ object {
 
 /* Servicebar */
 .servicebar {
+  grid-area: servicebar;
   margin-top: 0.1875rem;
   min-height: 6.25rem;
   background-image: url(../../src/img/features-repeatable-bg.png);
@@ -1185,7 +1186,7 @@ object {
     min-width: 3.125rem;
     margin-right: 0.625rem; }
   .service .service__body h3 {
-    color: #ef4632;
+    color: #ef4634;
     font-size: 1.25rem;
     margin: 0.3125rem; }
   .service .service__body p {
@@ -1193,7 +1194,7 @@ object {
     font-size: 0.8125rem;
     margin: 0.3125rem; }
   .service .service__body:hover {
-    color: #ef4632; }
+    color: #ef4634; }
 
 .site-footer {
   margin: 1.25rem auto;
@@ -1262,7 +1263,6 @@ object {
   margin: 0 0 1.5rem; }
 
 .site-main {
-  background: #ffffff;
   padding: 0.9375rem; }
 
 .designfly-pagination {
@@ -1288,12 +1288,137 @@ object {
     background: #000000;
     border-radius: 0.1875rem; }
     .portfolio-title p .portfolio-button:hover {
-      color: #ef4632; }
+      color: #ef4634; }
+
+.post-thumbnail {
+  display: inline-block;
+  background: #000000;
+  border-radius: 0.625rem;
+  content: "view"; }
 
 .post-thumbnail img {
   width: 18.75rem;
   height: 13.125rem;
-  border-radius: 0.625rem; }
+  border-radius: 0.625rem;
+  cursor: pointer; }
+  .post-thumbnail img:hover {
+    opacity: 0.5; }
+
+.designfly-custom-pagination {
+  width: 220%;
+  text-align: center;
+  margin-left: 50%; }
+
+/* LightBox */
+.lightbox {
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; }
+  .lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .lightbox .lightbox-img {
+    position: relative;
+    background-color: #ffffff;
+    padding: 1.25rem 1.25rem 5rem 1.25rem; }
+  .lightbox .lightbox-close {
+    text-align: center;
+    margin-bottom: 0.125rem;
+    position: absolute;
+    top: 0;
+    right: -1.25rem;
+    color: #000000;
+    cursor: pointer;
+    width: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0 0.125rem 0.125rem 0; }
+    .lightbox .lightbox-close:hover {
+      color: #d32f2f; }
+  .lightbox .lightbox-title {
+    color: #000000;
+    position: absolute;
+    bottom: 1.25rem;
+    margin-left: 2.25rem;
+    text-align: center;
+    width: 80%; }
+  .lightbox .lightbox-next {
+    color: #000000;
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer; }
+    .lightbox .lightbox-next:hover {
+      color: #d32f2f; }
+  .lightbox .lightbox-prev {
+    color: #000000;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    cursor: pointer; }
+    .lightbox .lightbox-prev:hover {
+      color: #d32f2f; }
+  .lightbox .wp-post-image {
+    height: 31.25rem;
+    background-color: #ffffff;
+    border-radius: 0.3125rem; }
+
+/* blog page */
+.designfly-blog-main {
+  display: grid;
+  margin: 0 15.625rem;
+  grid-template-areas: "servicebar servicebar servicebar " "blog blog sidebar"; }
+  .designfly-blog-main .lets-blog {
+    text-shadow: 0.125rem #ffffff;
+    font-weight: 100;
+    font-size: 2.8125rem; }
+  .designfly-blog-main .lets-blog-hr {
+    width: 100%; }
+  .designfly-blog-main .primary {
+    grid-area: blog;
+    margin-left: 15rem; }
+  .designfly-blog-main .secondary {
+    grid-area: sidebar;
+    margin-right: 15rem; }
+    .designfly-blog-main .secondary .portfolio_widget {
+      display: grid;
+      grid-template-areas: "img img img img";
+      grid-gap: 0.625rem; }
+    .designfly-blog-main .secondary .widget-title {
+      text-shadow: 0.125rem #ffffff;
+      font-size: 1.5625rem;
+      font-weight: 100; }
+    .designfly-blog-main .secondary .portfolio__img {
+      height: 3.75rem;
+      width: 3.75rem;
+      border-radius: 0.3125rem; }
+
+/* single page */
+.designfly-single-blog {
+  display: grid;
+  grid-template-areas: "servicebar servicebar servicebar " "blog blog sidebar"; }
+  .designfly-single-blog .primary {
+    grid-area: blog;
+    margin-left: 15rem; }
+  .designfly-single-blog .secondary {
+    grid-area: sidebar;
+    margin-right: 15rem; }
+    .designfly-single-blog .secondary .portfolio_widget {
+      display: grid;
+      grid-template-areas: "img img img img";
+      grid-gap: 0.625rem; }
+    .designfly-single-blog .secondary .widget-title {
+      text-shadow: 0.125rem #ffffff;
+      font-size: 1.5625rem;
+      font-weight: 100; }
+    .designfly-single-blog .secondary .portfolio__img {
+      height: 3.75rem;
+      width: 3.75rem;
+      border-radius: 0.3125rem; }
 
 /*==============================
         Main Menu
@@ -1340,7 +1465,7 @@ object {
   .designfly-main-navigation .current-menu-item > a,
   .designfly-main-navigation .current_page_ancestor > a {
     color: #ffffff;
-    background-color: #ef4632;
+    background-color: #ef4634;
     border-radius: 0.1875rem; }
 
 .site-main .comment-navigation, .site-main
@@ -1420,7 +1545,6 @@ object {
     max-width: 100%; }
 
 .widget-sidebar {
-  background: #ffffff;
   clear: both;
   padding: 0.9375rem; }
 
@@ -1430,7 +1554,32 @@ object {
 
 .widget-title {
   font-size: 1.375rem;
-  line-height: 1.875rem; }
+  line-height: 1.875rem;
+  padding: 0 0.625rem; }
+
+.after-title {
+  width: 95%; }
+
+.widget-post--custom {
+  display: flex; }
+
+.widget-post__title {
+  margin-left: 0.3125rem; }
+
+.widget-post__author {
+  margin-top: -0.9375rem;
+  margin-left: 0.3125rem;
+  font-size: 0.75rem; }
+  .widget-post__author .author a {
+    color: #ef4634; }
+    .widget-post__author .author a:hover {
+      text-decoration: underline; }
+
+.widget-post__img {
+  height: 2.8125rem;
+  width: 2.8125rem;
+  border-radius: 0.1875rem;
+  margin-top: 1.25rem; }
 
 @media print, screen and (min-width: 48em) {
     body {

@@ -27,7 +27,6 @@
 }
 
 .site-main {
-	background: $white;
 	padding: 15px;
 }
 
@@ -51,7 +50,7 @@
 		text-shadow: 2px $white;
 
 		.portfolio-button {
-			margin-left:50%;
+			margin-left: 50%;
 			font-size: 16px;
 			padding: 2px 7px;
 			color: $white;
@@ -65,8 +64,188 @@
 	}
 }
 
+.post-thumbnail {
+	display: inline-block;
+	background: $black;
+	border-radius: 10px;
+	content: "view";
+}
+
 .post-thumbnail img {
 	width: 300px;
 	height: 210px;
 	border-radius: 10px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.designfly-custom-pagination {
+	width: 220%;
+	text-align: center;
+	margin-left: 50%;
+}
+
+/* LightBox */
+
+.lightbox {
+	position: fixed;
+	z-index: $z-index-lightbox;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+
+	&.active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.lightbox-img {
+		position: relative;
+		background-color: $white;
+		padding: 20px 20px 80px 20px;
+	}
+
+	.lightbox-close {
+		text-align: center;
+		margin-bottom: 2px;
+		position: absolute;
+		top: 0;
+		right: -20px;
+		color: $black;
+		cursor: pointer;
+		width: 20px;
+		background-color: $white;
+		border-radius: 0 2px 2px 0;
+
+		&:hover {
+			color: $red-100;
+		}
+	}
+
+	.lightbox-title{
+		color: $black;
+		position: absolute;
+		bottom: 20px;
+		margin-left: 36px;
+		text-align: center;
+		width:80%;
+	}
+
+	.lightbox-next {
+		color: $black;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		cursor: pointer;
+
+		&:hover {
+			color: $red-100;
+		}
+	}
+
+	.lightbox-prev {
+		color: $black;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		cursor: pointer;
+
+		&:hover {
+			color: $red-100;
+		}
+	}
+
+	.wp-post-image {
+		height: 500px;
+		background-color: $white;
+		border-radius: 5px;
+	}
+}
+
+/* blog page */
+.designfly-blog-main {
+	display: grid;
+	margin: 0 250px;
+	grid-template-areas:
+		"servicebar servicebar servicebar "
+		"blog blog sidebar";
+
+	.lets-blog {
+		text-shadow: 2px $white;
+		font-weight: 100;
+		font-size: 45px;
+	}
+
+	.lets-blog-hr {
+		width: 100%;
+	}
+	.primary {
+		grid-area: blog;
+		margin-left: 240px;
+	}
+
+	.secondary {
+		grid-area: sidebar;
+		margin-right: 240px;
+
+		.portfolio_widget {
+			display: grid;
+			grid-template-areas: "img img img img";
+			grid-gap: 10px;
+		}
+
+		.widget-title {
+			text-shadow: 2px $white;
+			font-size: 25px;
+			font-weight: 100;
+		}
+
+		.portfolio__img {
+			height: 60px;
+			width: 60px;
+			border-radius: 5px;
+		}
+	}
+}
+
+/* single page */
+.designfly-single-blog {
+	display: grid;
+	grid-template-areas:
+		"servicebar servicebar servicebar "
+		"blog blog sidebar";
+
+	.primary {
+		grid-area: blog;
+		margin-left: 240px;
+	}
+
+	.secondary {
+		grid-area: sidebar;
+		margin-right: 240px;
+
+		.portfolio_widget {
+			display: grid;
+			grid-template-areas: "img img img img";
+			grid-gap: 10px;
+		}
+
+		.widget-title {
+			text-shadow: 2px $white;
+			font-size: 25px;
+			font-weight: 100;
+		}
+
+		.portfolio__img {
+			height: 60px;
+			width: 60px;
+			border-radius: 5px;
+		}
+	}
 }

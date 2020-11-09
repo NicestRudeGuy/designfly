@@ -8,7 +8,6 @@
 }
 
 .widget-sidebar {
-	background: $white;
 	clear: both;
 	padding: map-get($grid-column-gutter, small) / 2;
 }
@@ -21,4 +20,38 @@
 .widget-title {
 	font-size: 22px;
 	line-height: 30px;
+	padding: 0 10px;
+}
+
+.after-title {
+	width: 95%;
+}
+
+.widget-post--custom {
+	display: flex;
+}
+
+.widget-post__title {
+	margin-left: 5px;
+}
+
+.widget-post__author {
+	margin-top: -15px;
+	margin-left: 5px;
+	font-size: 12px;
+
+	.author a{
+		color: $red-light;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.widget-post__img {
+	height: 45px;
+	width: 45px;
+	border-radius: 3px;
+	margin-top: 20px;
 }

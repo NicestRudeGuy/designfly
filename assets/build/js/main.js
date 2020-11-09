@@ -266,6 +266,92 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/portfolio.js":
+/*!****************************************!*\
+  !*** ./src/js/components/portfolio.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* eslint-disable indent */
+
+/**
+ * Portfolio JS.
+ *
+ */
+console.log('pathname ' + window.location.pathname);
+
+if ('/portfolio/' === window.location.pathname || '/' === window.location.pathname || '/portfolio/page/2/' === window.location.pathname) {
+  var a = 0;
+  var lightBox = document.createElement('div');
+  lightBox.classList.add('lightbox');
+  document.body.appendChild(lightBox);
+  var lightBoxImg = document.createElement('div');
+  lightBoxImg.classList.add('lightbox-img');
+  document.querySelector('.lightbox').appendChild(lightBoxImg);
+  var close = document.createElement('div');
+  close.classList.add('lightbox-close');
+  var next = document.createElement('div');
+  next.classList.add('lightbox-next');
+  var prev = document.createElement('div');
+  prev.classList.add('lightbox-prev');
+  var title = document.createElement('div');
+  title.classList.add('lightbox-title');
+  var images = document.querySelectorAll(' .wp-post-image ');
+  var img = document.createElement('img');
+  images.forEach(function (image) {
+    image.addEventListener('click', function (e) {
+      lightBox.classList.add('active');
+      close.textContent = 'X';
+      next.textContent = '→';
+      prev.textContent = '←';
+      title.textContent = 'lorem ipsum dolor sit amet';
+      img.src = image.src;
+      img.classList = image.classList;
+
+      while (lightBoxImg.firstChild) {
+        lightBoxImg.removeChild(lightBoxImg.firstChild);
+      }
+
+      lightBoxImg.appendChild(img);
+      lightBoxImg.appendChild(title);
+      lightBoxImg.appendChild(close);
+      lightBoxImg.appendChild(next);
+      lightBoxImg.appendChild(prev);
+    });
+  });
+  var total = images.length;
+  close.addEventListener('click', function (e) {
+    if (e.target !== e.currentTarget) {
+      return;
+    }
+
+    lightBox.classList.remove('active');
+  });
+  next.addEventListener('click', function (e) {
+    console.log('clicked next');
+
+    if (total - 1 > a) {
+      ++a;
+      img.src = images[a].src;
+    } else {
+      console.log('cant go further');
+    }
+  });
+  prev.addEventListener('click', function (e) {
+    console.log('clicked prev');
+
+    if (0 < a) {
+      --a;
+      img.src = images[a].src;
+    } else {
+      console.log('cant go below');
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -280,11 +366,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
 /* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
 /* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_portfolio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/portfolio */ "./src/js/components/portfolio.js");
+/* harmony import */ var _components_portfolio__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_portfolio__WEBPACK_IMPORTED_MODULE_3__);
 /**
  * Main scripts, loaded on all pages.
  *
  * @package Designfly
  */
+
 
 
 

@@ -45,7 +45,7 @@
 		<?php
 		else :
 			?>
-			<a class="post-thumbnail" href="#img<?php echo wp_kses_post( $args['id'] ); ?>">
+			<a class="post-thumbnail">
 			<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
@@ -54,6 +54,7 @@
 			}
 			?>
 			</a>
+
 			<?php
 		endif;
 		?>
