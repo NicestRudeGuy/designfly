@@ -1,0 +1,329 @@
+/* Media Queries */
+
+@media (max-width: 1060px) and (min-width: 768px) {
+	.site-header {
+		display: grid;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.site-branding {
+		margin-top: 10px;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.designfly-main-navigation {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+
+		.primary-menu {
+			display: grid;
+			text-align: center;
+		}
+	}
+
+	.header-image {
+		width: 100%;
+		height: auto;
+
+		.carousel__box {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.carousel__slides__body {
+			display: none;
+		}
+	}
+
+	.servicebar {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.service__body {
+		display: none;
+	}
+
+	.portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item"
+			"item item"
+			"item item"
+			"item item"
+			"item item"
+			"item item"
+			"item item"
+			"item item"
+			"pag pag ";
+		grid-gap: 10px;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+	}
+
+	.portfolio-title p {
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+
+		.portfolio-button {
+			display: none;
+		}
+	}
+
+	.lightbox-img {
+		margin: 20px;
+	}
+
+	.designfly-custom-pagination {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		grid-area: pag;
+	}
+
+	.site-content {
+		/* blog home*/
+		.designfly-blog-main {
+			display: grid;
+			grid-template-areas:
+				"primary"
+				"secondary";
+			margin: 0px;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+			.entry-meta {
+				margin: 10px;
+				top: 0px;
+			}
+
+			.blog-post-container {
+				display: grid;
+				grid-template-columns: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wp-post-image {
+				margin: auto;
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: auto;
+		}
+
+		/* sinlge blog */
+		.designfly-single-blog {
+			display: grid;
+			grid-template-areas:
+				"primary"
+				"secondary";
+			margin: 10px;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+			.entry-meta {
+				margin: 10px;
+				top: 0;
+			}
+			.blog-post-container {
+				display: grid;
+				grid-template-columns: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wp-post-image {
+				margin: auto;
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: auto;
+		}
+	}
+
+	.site-footer {
+		text-align: center;
+		display: grid;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.site-header {
+		display: grid;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.site-branding {
+		margin-top: 10px;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.designfly-main-navigation {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+
+		.primary-menu {
+			display: grid;
+			text-align: center;
+		}
+	}
+
+	.header-image {
+		width: 100%;
+		height: auto;
+
+		.carousel__box {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.carousel__slides__body {
+			display: none;
+		}
+	}
+
+	.servicebar {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.service__body {
+		display: none;
+	}
+
+	.portfolio-content {
+		display: grid;
+		grid-template-areas: "item";
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+	}
+
+	.portfolio-title p {
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+
+		.portfolio-button {
+			display: none;
+		}
+	}
+
+	.lightbox-img {
+		margin: 20px;
+	}
+
+	.designfly-custom-pagination {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.site-content {
+		/* blog home*/
+		.designfly-blog-main {
+			display: grid;
+			grid-template-areas:
+				"primary"
+				"secondary";
+			margin: 0px;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+			.entry-meta {
+				margin: 10px;
+				top: 0;
+			}
+			.blog-post-container {
+				display: grid;
+				grid-template-columns: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wp-post-image {
+				margin: auto;
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: auto;
+		}
+
+		/* sinlge blog */
+		.designfly-single-blog {
+			display: grid;
+			grid-template-areas:
+				"primary"
+				"secondary";
+			margin: 0px;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+			.entry-meta {
+				margin: 10px;
+				top: 0;
+			}
+			.blog-post-container {
+				display: grid;
+				grid-template-columns: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wp-post-image {
+				margin: auto;
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: auto;
+		}
+	}
+
+	.site-footer {
+		text-align: center;
+		display: grid;
+	}
+}
