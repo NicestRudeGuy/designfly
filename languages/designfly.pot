@@ -56,11 +56,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../footer.php:34
+#: ../footer.php:35
 msgid "No Posts found!"
 msgstr ""
 
-#: ../front-page.php:41, ../page-templates/portfolio-template.php:42
+#: ../front-page.php:45, ../page-templates/portfolio-template.php:42
 msgid "No items found."
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Portfolio Page"
 msgstr ""
 
-#: ../template-parts/content-blog.php:35, ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:24, ../template-parts/content.php:47
+#: ../template-parts/content-blog.php:41, ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:23, ../template-parts/content.php:49
 msgid "Pages:"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgid "Edit"
 msgstr ""
 
 #. translators: %s: Name of current post.
-#: ../template-parts/content.php:32
+#: ../template-parts/content.php:34
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -216,27 +216,27 @@ msgid "Fax Number"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:407
-msgid "Add Facebok Icon"
+msgid "Add Facebok Logo"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:408
-msgid "Facebook Icon Control"
+msgid "Facebook Logo Control"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:441
-msgid "Add Google Icon"
+msgid "Add Google Logo"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:442
-msgid "Google Icon Control"
+msgid "Google Logo Control"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:475
-msgid "Add Linked Icon"
+msgid "Add Linked Logo"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:476
-msgid "Linked Icon Control"
+msgid "Linked Logo Control"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:509
@@ -248,11 +248,11 @@ msgid "Pintrest Icon Control"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:543
-msgid "Add Twitter Icon"
+msgid "Add Twitter Logo"
 msgstr ""
 
 #: ../inc/classes/class-customizer.php:544
-msgid "Twitter Icon Control"
+msgid "Twitter Logo Control"
 msgstr ""
 
 #: ../inc/classes/class-designfly.php:140
@@ -271,20 +271,20 @@ msgstr ""
 msgid "Popular Posts"
 msgstr ""
 
-#: ../inc/classes/class-widget-popular-posts.php:131, ../inc/classes/class-widget-portfolio-posts.php:117, ../inc/classes/class-widget-recent-posts.php:128
+#: ../inc/classes/class-widget-popular-posts.php:134, ../inc/classes/class-widget-portfolio-posts.php:119, ../inc/classes/class-widget-recent-posts.php:130
 msgid "Title:"
 msgstr ""
 
-#: ../inc/classes/class-widget-popular-posts.php:136, ../inc/classes/class-widget-portfolio-posts.php:122, ../inc/classes/class-widget-recent-posts.php:133
+#: ../inc/classes/class-widget-popular-posts.php:139, ../inc/classes/class-widget-portfolio-posts.php:124, ../inc/classes/class-widget-recent-posts.php:135
 msgid "Number of posts to show:"
 msgstr ""
 
-#: ../inc/classes/class-widget-popular-posts.php:142, ../inc/classes/class-widget-recent-posts.php:139
+#: ../inc/classes/class-widget-popular-posts.php:145, ../inc/classes/class-widget-recent-posts.php:141
 msgid "Display post date?"
 msgstr ""
 
 #: ../inc/classes/class-widget-portfolio-posts.php:27
-msgid "Your site&#8217;s Portfolio Posts."
+msgid "Your site&#8217; Portfolio Posts."
 msgstr ""
 
 #: ../inc/classes/class-widget-portfolio-posts.php:32

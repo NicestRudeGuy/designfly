@@ -48,7 +48,7 @@
 				]
 			);
 			?>
-			<?php get_search_form(); ?>
+		<?php get_search_form(); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

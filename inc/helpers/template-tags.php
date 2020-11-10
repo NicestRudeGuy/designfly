@@ -218,8 +218,8 @@ function designfly_portfolio_pagination( $query ) {
 		wp_kses(
 			paginate_links(
 				array(
-					'prev_text' => '<i class="pagination-arrow-left" aria-hidden="true"></i> ' . __( 'Previous', 'designfly' ),
-					'next_text' => __( 'Next', 'designfly' ) . ' <i class="pagination-arrow-right" aria-hidden="true"></i>',
+					'prev_text' => '<i class="pagination-arrow-left" aria-hidden="true"></i> ' . ( '←' ),
+					'next_text' => ( '→' ) . ' <i class="pagination-arrow-right" aria-hidden="true"></i>',
 					'total'     => $query->max_num_pages,
 				)
 			),

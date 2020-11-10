@@ -34,7 +34,6 @@ get_template_part( 'template-parts/content', 'servicebar' );
 
 			/* Start the Loop */
 			while ( have_posts() ) :
-
 				the_post();
 
 				/*

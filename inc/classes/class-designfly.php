@@ -137,7 +137,7 @@ class DESIGNFLY {
 	public function add_read_more_link() {
 		global $post;
 
-		return sprintf( '<a class="moretag" href="%s">%s</a>', get_permalink( $post->ID ), esc_html__( 'Read More', 'designfly' ) );
+		return sprintf( '<br> <a class="moretag" href="%s">%s</a>', get_permalink( $post->ID ), esc_html__( 'Read More', 'designfly' ) );
 	}
 
 	/**
