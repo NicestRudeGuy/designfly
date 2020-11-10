@@ -59,10 +59,10 @@
 }
 
 .carousel__slides__title {
-	color: $white;
-	text-shadow: 2px 0 $red-dark;
 	font-size: 70px;
 	font-weight: 600;
+	color: $white;
+	text-shadow: 2px 0 $red-light;
 	
 }
 
@@ -86,7 +86,6 @@
 
 /* Servicebar */
 .servicebar{
-	grid-area: servicebar;
 	margin-top:3px;
 	min-height: 100px;
 	background-image: url('../img/features-repeatable-bg.png');
