@@ -278,18 +278,13 @@
 			margin-left: 240px;
 		}
 
-		.title-meta-hr {
-			width: 98%;
+		.blog-comment-no {
+			float: right;
+			color: $red-light;
 		}
 
-		.url {
-			color: $red-light;
-
-			/* stylelint-disable */
-			&:hover {
-				text-decoration: underline;
-			}
-			/* stylelint-enable */
+		.title-meta-hr {
+			width: 98%;
 		}
 
 		.title-days {
@@ -341,6 +336,10 @@
 		}
 
 		.cat-links {
+			display: none;
+		}
+
+		.comments-link {
 			display: none;
 		}
 
@@ -405,12 +404,30 @@
 			margin: 10px;
 		}
 
-		/* .comment-form {
-			display: grid;
-			grid-template-areas:
-				"comment comment comment"
-				"author email url";
-		} */
+		.comment-form-author {
+			display: flex;
+			flex-direction: column;
+			float: left;
+			max-width: 30%;
+			margin: 10px;
+		}
+
+		.comment-form-email {
+			display: flex;
+			flex-direction: column;
+			float: left;
+			max-width: 30%;
+			margin: 10px;
+		}
+
+		.comment-form-url {
+			display: flex;
+			flex-direction: column;
+			float: left;
+			max-width: 30%;
+			margin: 10px;
+		}
+
 		.comment-form-comment textarea {
 			grid-area: comment;
 			border: 1px solid $general-color;
@@ -445,11 +462,16 @@
 			display: none;
 		}
 
+		.comment-meta::before {
+			margin: 0 5px;
+			content: "💬";
+		}
+
 		.vcard a {
 			color: $red-light;
 			margin-right: 2px;
 			/* stylelint-disable */
-			&:hover{
+			&:hover {
 				text-decoration: underline;
 				text-decoration-thickness: 2px;
 			}

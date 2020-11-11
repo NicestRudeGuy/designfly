@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1280px) {
 	.site-header {
-		display:flex;
+		display: flex;
 		flex-direction: row;
 		justify-content: center;
 
@@ -10,11 +10,10 @@
 			display: block;
 			margin-right: 200px;
 
-			.custom-logo-link{
+			.custom-logo-link {
 				display: block;
 				width: 200px;
 			}
-
 		}
 
 		.designfly-main-navigation {
@@ -24,11 +23,11 @@
 				display: flex;
 			}
 
-			.designfly-search-form{
+			.designfly-search-form {
 				display: flex;
 			}
 
-			.search-submit{
+			.search-submit {
 				height: 32px;
 				margin-left: 10px;
 			}
@@ -39,7 +38,7 @@
 		width: 100%;
 
 		.carousel__box {
-			padding-top: 10em;
+			padding-top: 5em;
 		}
 	}
 
@@ -101,9 +100,8 @@
 		/* blog home*/
 		.designfly-blog-main {
 			display: grid;
-			grid-template-areas:
-				"primary secondary";
-			margin:auto;
+			grid-template-areas: "primary secondary";
+			margin: auto;
 			width: 70%;
 		}
 
@@ -111,10 +109,9 @@
 			grid-area: primary;
 			margin: auto;
 
-			.blog-post-container{
+			.blog-post-container {
 				display: grid;
 				grid-template-areas: "auto auto";
-
 			}
 		}
 
@@ -126,10 +123,9 @@
 		/* sinlge blog */
 		.designfly-single-blog {
 			display: grid;
-			grid-template-areas:
-				"primary secondary";
+			grid-template-areas: "primary secondary";
 			width: 70%;
-			margin:auto;
+			margin: auto;
 		}
 
 		.primary {
@@ -156,7 +152,177 @@
 			grid-area: secondary;
 			margin: 0 auto;
 		}
+	}
 
+	.site-footer {
+		display: flex;
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.site-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		.site-branding {
+			display: block;
+			margin-right: 200px;
+
+			.custom-logo-link {
+				display: block;
+				width: 200px;
+			}
+		}
+
+		.designfly-main-navigation {
+			margin-left: 0 100px;
+
+			.primary-menu {
+				display: flex;
+			}
+
+			.designfly-search-form {
+				display: flex;
+			}
+
+			.search-submit {
+				height: 32px;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.header-image {
+		width: 100%;
+
+		.carousel__box {
+			padding-top: 5em;
+		}
+	}
+
+	.servicebar-box {
+		display: grid;
+		padding-bottom: 10px;
+		.service {
+			display: flex;
+			width: 300px;
+		}
+	}
+
+	.portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item item"
+			"item item item"
+			"item item item"
+			"item item item"
+			"item item item"
+			"pag pag pag";
+		grid-gap: 10px;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+	}
+
+	hr {
+		width: 70%;
+	}
+
+	.portfolio-title p {
+		margin: 10px;
+		padding-left: 190px;
+	}
+
+	.portfolio-button {
+		display: none;
+	}
+
+	.lightbox-img {
+		margin: 20px;
+	}
+
+	.designfly-custom-pagination {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		grid-area: pag;
+	}
+
+	.site-content {
+		/* blog home*/
+		.designfly-blog-main {
+			display: grid;
+			grid-template-areas: "primary secondary";
+			margin: auto;
+			width: 70%;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+
+			.blog-post-container {
+				display: grid;
+				grid-template-areas: "auto auto";
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: 0 auto;
+		}
+
+		/* sinlge blog */
+		.designfly-single-blog {
+			display: grid;
+			grid-template-areas: "primary secondary";
+			width: 70%;
+			margin: auto;
+		}
+
+		.primary {
+			grid-area: primary;
+			margin: auto;
+			.entry-meta {
+				margin: 10px;
+				top: 0;
+			}
+
+			.blog-post-container {
+				display: grid;
+				grid-template-columns: auto;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.wp-post-image {
+				margin: auto;
+			}
+			.comment-form-author {
+				margin: 5px;
+			}
+
+			.comment-form-email {
+				margin: 5px;
+			}
+
+			.comment-form-url {
+				margin: 5px;
+			}
+		}
+
+		.secondary {
+			grid-area: secondary;
+			margin: 0 auto;
+		}
 	}
 
 	.site-footer {
