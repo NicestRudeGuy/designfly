@@ -73,9 +73,10 @@ class Widget_Portfolio_Posts extends WP_Widget {
 		// before and after widget arguments are defined by themes.
 		echo wp_kses_post( $args['before_widget'] );
 		// This is where you run the code and display the output.
-		foreach ( $recent_posts as $post ) : ?>
-			<div class = " portfolio--widget">
-				<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfollio' ) ) ); ?>">
+		foreach ( $recent_posts as $post ) :
+			?>
+			<div class = "portfolio--widget">
+				<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfolio' ) ) ); ?>">
 				<?php
 				if ( has_post_thumbnail( $post['ID'] ) ) {
 					echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'portfolio__img' ) );

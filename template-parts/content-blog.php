@@ -19,6 +19,7 @@
 			<div class="entry-meta">
 				<?php designfly_posted_by(); ?>
 				<?php designfly_posted_on(); ?>
+				<div class="blog-comment-no"><?php comments_number(); ?></div>
 				<hr class="title-meta-hr">
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -29,7 +30,7 @@
 		the_post_thumbnail();
 	}
 	?>
-
+	<!-- put entry meta here if needed fr styling -->
 	<div class="entry-content clearfix">
 		<?php
 			the_excerpt();

@@ -60,7 +60,7 @@ msgstr ""
 msgid "No Posts found!"
 msgstr ""
 
-#: ../front-page.php:45, ../page-templates/portfolio-template.php:42
+#: ../front-page.php:46, ../page-templates/portfolio-template.php:42
 msgid "No items found."
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Portfolio Page"
 msgstr ""
 
-#: ../template-parts/content-blog.php:41, ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:23, ../template-parts/content.php:49
+#: ../template-parts/content-blog.php:42, ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:23, ../template-parts/content.php:49
 msgid "Pages:"
 msgstr ""
 
@@ -271,11 +271,11 @@ msgstr ""
 msgid "Popular Posts"
 msgstr ""
 
-#: ../inc/classes/class-widget-popular-posts.php:134, ../inc/classes/class-widget-portfolio-posts.php:119, ../inc/classes/class-widget-recent-posts.php:130
+#: ../inc/classes/class-widget-popular-posts.php:134, ../inc/classes/class-widget-portfolio-posts.php:120, ../inc/classes/class-widget-recent-posts.php:130
 msgid "Title:"
 msgstr ""
 
-#: ../inc/classes/class-widget-popular-posts.php:139, ../inc/classes/class-widget-portfolio-posts.php:124, ../inc/classes/class-widget-recent-posts.php:135
+#: ../inc/classes/class-widget-popular-posts.php:139, ../inc/classes/class-widget-portfolio-posts.php:125, ../inc/classes/class-widget-recent-posts.php:135
 msgid "Number of posts to show:"
 msgstr ""
 

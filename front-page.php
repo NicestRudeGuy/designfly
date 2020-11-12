@@ -29,7 +29,8 @@ get_template_part( 'template-parts/content', 'servicebar' );
 					</p>
 					<hr />
 			</div>
-			<div class="portfolio-content">
+
+			<div class="home-portfolio-content">
 				<?php
 				while ( $designfly_query->have_posts() ) :
 					$designfly_query->the_post();
