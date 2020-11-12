@@ -1,14 +1,120 @@
 /* Media Queries */
 
+@media only screen and (min-width: 1440px) {
+
+	.site-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		gap: 100px;
+
+		.site-branding {
+			display: block;
+			margin-right: 150px;
+
+			.custom-logo-link {
+				display: block;
+				width: 200px;
+			}
+		}
+
+		.designfly-main-navigation {
+			margin-left: 0 100px;
+			.primary-menu {
+				display: flex;
+			}
+
+			.designfly-search-form {
+				display: flex;
+			}
+
+			.search-submit {
+				height: 32px;
+				margin-left: 10px;
+			}
+		}
+
+	}
+
+	.servicebar{
+		display: flex;
+	}
+
+	.servicebar-box {
+		display: grid;
+		gap: 45px;
+		margin:auto;
+
+		.service {
+			display: flex;
+			width: 300px;
+		}
+	}
+
+	.portfolio-title {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	.portfolio-title p {
+		margin-left: 20px;
+	}
+
+	.portfolio-button {
+		display: inline-block;
+		width: 70px;
+		margin-left:520px;
+	}
+
+	.home-portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item item"
+			"item item item";
+		grid-gap: 50px;
+		justify-content: center;
+		align-items: center;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+
+	}
+
+	.portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item item"
+			"item item item"
+			"item item item"
+			"item item item"
+			"item item item"
+			"pag pag pag";
+		grid-gap: 50px;
+		justify-content: center;
+		align-items: center;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+
+		.post-thumbnail {
+			width: 96%;
+		}
+
+	}
+}
+
 @media only screen and (min-width: 1280px) {
 	.site-header {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-around;
 
 		.site-branding {
 			display: block;
-			margin-right: 200px;
+			margin-right: 150px;
 
 			.custom-logo-link {
 				display: block;
@@ -49,6 +155,24 @@
 			display: flex;
 			width: 300px;
 		}
+	}	
+
+	.home-portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item item"
+			"item item item";
+		grid-gap: 5px;
+		justify-content: center;
+		align-items: center;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+
+		.post-thumbnail {
+			width: 96%;
+		}
 	}
 
 	.portfolio-content {
@@ -60,27 +184,34 @@
 			"item item item"
 			"item item item"
 			"pag pag pag";
-		grid-gap: 10px;
+		grid-gap: 5px;
 		justify-content: center;
 		align-items: center;
-		margin: 0px;
 
 		.portfolio-item {
 			grid-area: item;
 		}
+
+		.post-thumbnail {
+			width: 96%;
+		}
+
 	}
 
 	hr {
 		width: 70%;
 	}
 
-	.portfolio-title p {
-		margin: 10px;
-		padding-left: 190px;
+	.portfolio-title {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
 	}
 
 	.portfolio-button {
-		display: none;
+		display: inline-block;
+		width: 70px;
+		margin-left: 38%;
 	}
 
 	.lightbox-img {
@@ -208,7 +339,23 @@
 		.service {
 			display: flex;
 			width: 300px;
+			margin: auto;
 		}
+	}
+
+	.home-portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item item"
+			"item item item";
+		grid-gap: 5px;
+		justify-content: center;
+		align-items: center;
+
+		.portfolio-item {
+			grid-area: item;
+		}
+
 	}
 
 	.portfolio-content {
@@ -379,6 +526,22 @@
 
 	.service__body {
 		display: none;
+	}
+
+	.home-portfolio-content {
+		display: grid;
+		grid-template-areas:
+			"item item"
+			"item item"
+			"item item";
+		grid-gap: 10px;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+
+		.portfolio-item {
+			grid-area: item;
+		}
 	}
 
 	.portfolio-content {
@@ -563,6 +726,19 @@
 
 		.portfolio-button {
 			display: none;
+		}
+	}
+
+	.home-portfolio-content {
+		display: grid;
+		grid-template-areas: "item";
+		grid-gap: 10px;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+
+		.portfolio-item {
+			grid-area: item;
 		}
 	}
 
