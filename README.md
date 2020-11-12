@@ -8,19 +8,19 @@ Gifs of Theme
 
 ### High res screens
 
-![Link](https://drive.google.com/file/d/1N0vtEWQK5WHa7idz5QQ6YfqwChv0giag/view?usp=sharing)
+https://drive.google.com/file/d/1N0vtEWQK5WHa7idz5QQ6YfqwChv0giag/view?usp=sharing
 
 ### Low res screens
 
-![Link](https://drive.google.com/file/d/1xxCII1GIj4ZddURa_CWiHTaVQc-8Gb02/view?usp=sharing)
+https://drive.google.com/file/d/1xxCII1GIj4ZddURa_CWiHTaVQc-8Gb02/view?usp=sharing
 
 ### Tab devices
 
-![Link](https://drive.google.com/file/d/15Xq-sWINo6wZtE4-ULumqeo9LE3EKe9w/view?usp=sharing)
+https://drive.google.com/file/d/15Xq-sWINo6wZtE4-ULumqeo9LE3EKe9w/view?usp=sharing
 
 ### Mobile devices
 
-![Link](https://drive.google.com/file/d/1TJ0v_iZzXbPP_0kJALn3esaGyNYo2jhS/view?usp=sharing)
+https://drive.google.com/file/d/1TJ0v_iZzXbPP_0kJALn3esaGyNYo2jhS/view?usp=sharing
 
 
 Getting Started
